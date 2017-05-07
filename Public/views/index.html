@@ -1,0 +1,129 @@
+<html>
+
+<head>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/screen.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+
+</head>
+
+<body>
+    <div class="mainContainer">
+    </div>
+
+    <script id="chatScreenTemplate" type="text/x-jsrender">
+        <div class="dashboardContainer">
+            <div class=" dashBoardView">
+                <div class="searchContainer ">
+                    <div class="loggedInUser">
+                        <img data-link="src{:'../images/'+ imageName +'.png' }" class="userImage" />
+                        <div class="loggedInUserName">{^{:name}}</div>
+                    </div>
+                    <div class="searchBarContainer"><input class="searchBar" type="text" placeholder="Search"></div>
+
+                    <div class="searchResults">
+
+                    </div>
+
+                </div>
+                <div class="userDetailContainer"></div>
+            </div>
+        </div>
+    </script>
+
+    <script id="mainViewTemplate" type="text/x-jsrender">
+        {^{for users}}
+        <div class="result" data-link="{on ~openUserToChat}">
+            <img data-link="src{:'../images/'+ imageName +'.png' }" class=" searchImage" />
+            <span class="name">{^{:name}}</span> {^{if notifications}}
+            <span class="notifications">{^{:notifications}}</span> {{/if}}
+        </div>
+        {{/for}}
+
+    </script>
+
+
+    <script id="userDetailTemplate" type="text/x-jsrender">
+        <div class="chatHeader">
+            <img data-link="src{:'../images/'+ imageName +'.png' }" class="userImage" />
+            <div class="currentOpenedUser">{^{:name}}</div>
+        </div>
+        <div class="messages"> </div>
+        <div class="sendMessage">
+            <div class="messageContainer"> <input type="text" onkeyup="invokeClick(event)" class="message" placeholder="Send a message" /> </div>
+
+
+
+            <img src="../images/send.png" data-link="{on ~sendMessage}" alt="send" class="sendButton">
+        </div>
+    </script>
+
+    <script id="loginScreenTemplate" type="text/x-jsrender">
+        <div class="loginPage">
+            REALCHAT
+            <div class="avatarContainer"></div>
+            <div class="loginContainer">
+                <div class="userName"><input class="user" onkeyup="invokeSubmit(event)" type="text" placeholder="Choose your avatar & select a username"></div>
+                <div class="submit" data-link="{on ~startChat}"><span class="loginText">LOGIN</span></div>
+            </div>
+        </div>
+
+
+    </script>
+
+    <script id="messagesContainerTemplate" type="text/x-jsrender">
+
+        {^{for histories}} {^{if flag}}
+
+        <div class="msgRight">
+            <div class="rightTail"></div>
+            <div class="msgContent">{^{:msg}}</div>
+            <div class="msgMeta">
+                <div class="time">{^{:time}}</div>
+                {^{if !status}}
+                <img class="status" src="../images/notseen.png" alt=""> {{else}}
+                <img class="status" src="../images/seen.png" alt=""> {{/if}}
+            </div>
+        </div>
+
+        {{else}}
+
+        <div class="msgLeft">
+            <div class="leftTail"></div>
+            <div class="msgContent">{^{:msg}}</div>
+            <div class="msgMeta">
+                <div class="time">{^{:time}}</div>
+            </div>
+        </div>
+
+        {{/if}} {{/for}}
+    </script>
+    <script type="text/javascript" src="../js/data.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../scripts/jquery.js"></script>
+    <script src="../js/jsrender.js"></script>
+    <script src="../js/jsview.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/index.js"></script>
+    <!--<script src="../scripts/bootstrap.min.js"></script>
+    <script src="../scripts/highcharts.js"></script>
+    <script src="../scripts/jquery.tmpl.min.js"></script>
+    <script src="../scripts/jslinq.js"></script>
+    <script src="../scripts/moment.min.js"></script>
+    <script src="../scripts/superjson.js"></script>
+    <script src="../scripts/tocca.min.js"></script>
+    <script src="../scripts/transit.js"></script>
+    <script src="../js/base.js"></script>-->
+
+
+</body>
+
+</html>

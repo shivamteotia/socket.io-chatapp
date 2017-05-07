@@ -1,0 +1,397 @@
+body {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+body .mainContainer {
+  background-image: url('../images/user.jpg');
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+body .mainContainer .loginPage {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 11rem;
+  font-weight: bold;
+}
+body .mainContainer .loginPage .avatarContainer {
+  position: relative;
+  width: 60rem;
+  margin: auto;
+}
+body .mainContainer .loginPage .avatarContainer img {
+  width: 9rem;
+  border: 0.05rem solid white;
+  transition: border-radius 0.5s, box-shadow 0.5s;
+  margin: 0.5rem;
+  text-align: center;
+}
+body .mainContainer .loginPage .avatarContainer img:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.05);
+}
+body .mainContainer .loginPage .loginContainer {
+  position: relative;
+  margin: auto;
+  height: 13rem;
+  width: 60rem;
+}
+body .mainContainer .loginPage .loginContainer .userName {
+  position: absolute;
+  height: 5rem;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+}
+body .mainContainer .loginPage .loginContainer .userName input[type=text] {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #354AAE;
+  font-size: 3rem;
+}
+body .mainContainer .loginPage .loginContainer .submit {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  height: 5rem;
+  background-color: #354AAE;
+}
+body .mainContainer .loginPage .loginContainer .submit .loginText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFFFFF;
+  font-size: 3rem;
+}
+body .mainContainer .dashboardContainer {
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  right: 0rem;
+  bottom: 0rem;
+}
+body .mainContainer .dashboardContainer .dashboardView {
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+  overflow: hidden;
+  left: 0rem;
+  bottom: 0rem;
+  border-top: 0.05rem solid #DBDBDB;
+  background-color: #FFFFFF;
+}
+body .mainContainer .dashboardContainer .dashboardView .searchContainer {
+  position: absolute;
+  width: 33rem;
+  top: 0rem;
+  bottom: 0rem;
+  float: left;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+body .mainContainer .dashboardContainer .dashboardView .searchContainer .searchBarContainer {
+  position: absolute;
+  top: 8rem;
+  height: 5rem;
+  width: 100%;
+  background-color: #FBFBFB;
+  border-bottom: 0.05rem solid #DBDBDB;
+}
+body .mainContainer .dashboardContainer .dashboardView .searchContainer .searchBarContainer .searchBar {
+  position: absolute;
+  height: 3rem;
+  width: 30rem;
+  background-color: #FFFFFF;
+  border-radius: 0.5rem;
+  border: 0.05rem solid #DBDBDB;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .mainContainer .dashboardContainer .dashboardView .searchContainer .loggedInUser {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  left: 0rem;
+  height: 8rem;
+  background-color: #EEEEEE;
+}
+body .mainContainer .dashboardContainer .dashboardView .searchContainer .loggedInUser .userImage {
+  position: relative;
+  width: 6rem;
+  margin-left: 1rem;
+  display: circle;
+  border-radius: 50%;
+  border: 0.4rem solid transparent;
+  margin-top: 0.8rem;
+  float: left;
+  background-color: cecaca;
+}
+body .mainContainer .dashboardContainer .dashboardView .searchContainer .loggedInUser .loggedInUserName {
+  position: relative;
+  font-size: 3rem;
+  float: left;
+  line-height: 7.3rem;
+  margin-left: 1.5rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .searchContainer input[type=text] {
+  font-size: 1.3rem;
+  outline: none;
+  padding-left: 1.3rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .searchContainer ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: lightslategrey;
+}
+body .mainContainer .dashboardContainer .dashboardView .searchContainer .searchResults::-webkit-scrollbar {
+  display: none;
+}
+body .mainContainer .dashboardContainer .dashboardView .searchContainer .searchResults {
+  position: absolute;
+  width: 33rem;
+  top: 13rem;
+  bottom: 0;
+  overflow: auto;
+  background-color: #FFFFFF;
+}
+body .mainContainer .dashboardContainer .dashboardView .searchContainer .searchResults .result:hover {
+  cursor: pointer;
+}
+body .mainContainer .dashboardContainer .dashboardView .searchContainer .searchResults .result {
+  position: relative;
+  display: block;
+  height: 7rem;
+  background-color: #FFFFFF;
+  border-bottom: 0.05rem solid #DBDBDB;
+}
+body .mainContainer .dashboardContainer .dashboardView .searchContainer .searchResults .result .searchImage {
+  position: relative;
+  width: 5rem;
+  margin-left: 1rem;
+  display: circle;
+  border-radius: 50%;
+  border: 0.4rem solid transparent;
+  margin-top: 1rem;
+  float: left;
+  background-color: cecaca;
+}
+body .mainContainer .dashboardContainer .dashboardView .searchContainer .searchResults .result .name {
+  position: relative;
+  background-color: #FFFFFF;
+  font-size: 2.2rem;
+  margin-left: 1.5rem;
+  line-height: 6.5rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .searchContainer .searchResults .result .notifications {
+  position: relative;
+  font-size: 1.5rem;
+  color: white;
+  float: right;
+  line-height: 2rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  border-radius: 4rem;
+  margin-right: 3rem;
+  background-color: #09D261;
+  margin-top: 2.5rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .searchContainer .searchResults .result:hover {
+  background-color: #E9EBEB;
+}
+body .mainContainer .dashboardContainer .dashboardView .searchContainer .searchResults .result:hover .name {
+  background-color: #E9EBEB;
+}
+body .mainContainer .dashboardContainer .dashboardView .searchNav::-webkit-scrollbar {
+  display: none;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer {
+  position: absolute;
+  bottom: 0rem;
+  right: 0rem;
+  top: 0rem;
+  border-left: 0.05rem solid #DBDBDB;
+  left: 33rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .chatHeader {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  left: 0rem;
+  height: 8rem;
+  background-color: #EEEEEE;
+  border-bottom: 0.05rem solid #DBDBDB;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .chatHeader .userImage {
+  position: relative;
+  width: 6rem;
+  margin-left: 1rem;
+  display: circle;
+  border-radius: 50%;
+  border: 0.4rem solid transparent;
+  margin-top: 0.8rem;
+  float: left;
+  background-color: cecaca;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .chatHeader .currentOpenedUser {
+  position: relative;
+  font-size: 3rem;
+  float: left;
+  line-height: 7.3rem;
+  margin-left: 1.5rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .messages::-webkit-scrollbar {
+  width: 0.8rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .messages::-webkit-scrollbar-thumb {
+  background: #CBCBCB;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .messages {
+  position: absolute;
+  overflow: auto;
+  top: 8rem;
+  bottom: 6rem;
+  left: 0rem;
+  right: 0rem;
+  background-color: #E5DDD5;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .messages .msgRight {
+  position: relative;
+  float: right;
+  clear: both;
+  height: auto;
+  background-color: #DCF8C6;
+  min-width: 11rem;
+  max-width: 80rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 4rem;
+  border-radius: 0.5rem 0 0.5rem 0.5rem;
+  box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .messages .msgRight .rightTail {
+  position: absolute;
+  height: 0;
+  width: 0;
+  /* background-color: red; */
+  border-top: 1.6rem solid #DCF8C6;
+  border-right: 1.6rem solid transparent;
+  right: -1.6rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .messages .msgRight .msgContent {
+  position: relative;
+  font-size: 1.7rem;
+  height: auto;
+  word-wrap: break-word;
+  margin: 1rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .messages .msgRight .msgMeta {
+  position: relative;
+  /* background-color: red; */
+  height: 2rem;
+  margin: 0.7rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .messages .msgRight .msgMeta .time {
+  position: absolute;
+  right: 3rem;
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .messages .msgRight .msgMeta .status {
+  position: absolute;
+  width: 2rem;
+  right: 0rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .messages .msgRight .msgMeta .status .tick {
+  position: relative;
+  width: 2rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .messages .msgLeft {
+  position: relative;
+  float: left;
+  clear: both;
+  height: auto;
+  background-color: #FFFFFF;
+  min-width: 9rem;
+  max-width: 80rem;
+  margin-top: 1rem;
+  margin-left: 4rem;
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .messages .msgLeft .leftTail {
+  position: absolute;
+  height: 0;
+  width: 0;
+  /* background-color: red; */
+  border-top: 1.6rem solid #FFFFFF;
+  border-left: 1.6rem solid transparent;
+  left: -1.6rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .messages .msgLeft .msgContent {
+  position: relative;
+  font-size: 1.7rem;
+  height: auto;
+  word-wrap: break-word;
+  margin: 1rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .messages .msgLeft .msgMeta {
+  position: relative;
+  /* background-color: red; */
+  height: 2rem;
+  margin: 0.7rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .messages .msgLeft .msgMeta .time {
+  position: absolute;
+  right: 1rem;
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .sendMessage {
+  position: absolute;
+  bottom: 0rem;
+  right: 0rem;
+  left: 0rem;
+  height: 6rem;
+  background-color: #F5F1EE;
+  border-top: 0.05rem solid #DBDBDB;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .sendMessage .messageContainer {
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem;
+  right: 7rem;
+  left: 1rem;
+  font-size: 1.5rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .sendMessage .messageContainer input[type=text] {
+  position: absolute;
+  top: 0rem;
+  bottom: 0rem;
+  width: 100%;
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+  border: none;
+  border-color: transparent;
+  outline: none;
+  border-radius: 0.4rem;
+}
+body .mainContainer .dashboardContainer .dashboardView .userDetailContainer .sendMessage .sendButton {
+  position: absolute;
+  width: 3rem;
+  right: 2rem;
+  top: 50%;
+  transform: translate(0, -50%);
+}

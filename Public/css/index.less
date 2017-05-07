@@ -1,0 +1,425 @@
+    @colorDefault: #FFFFFF;
+    @colorBlue: #354AAE;
+    @colorGreen: #09D261;
+    @colorMsgSent: #DCF8C6;
+    @colorMsgReceived: #FFFFFF;
+    @colorMsgsBackground: #E5DDD5;
+    @colorHeader: #EEEEEE;
+    @colorScroll: #CBCBCB;
+    @colorSearchBarContainer: #FBFBFB;
+    @colorHoverResult: #E9EBEB;
+    @colorBorder: #DBDBDB;
+    @colorSendMsg: #F5F1EE;
+    body {
+        position: relative;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        .mainContainer {
+            background-image: url('../images/user.jpg');
+            .loginPage{
+                position:absolute;
+                top:40%;
+                left:50%;
+                transform:translate(-50%,-50%);
+                
+                color:white;
+                font-size: 11rem;
+                font-weight:bold;
+            .avatarContainer {
+                position: relative;
+                width:60rem;
+                margin:auto;
+               
+               
+                img {
+                    width:9rem;
+                    border: 0.05rem solid white;
+                    transition: border-radius 0.5s, box-shadow 0.5s;
+                    margin: 0.5rem;
+                    text-align: center;
+                }
+                img:hover {
+                    cursor:pointer;
+                    border-radius: 50%;
+                    box-shadow:  rgba(0, 0, 0, 0.05);
+                }
+            }
+            .loginContainer {
+                position: relative;
+              margin:auto;
+                height: 13rem;
+               
+                width: 60rem;
+                .userName {
+                    position: absolute;
+                    height: 5rem;
+                    top: 1rem;
+                    left: 1rem;
+                    right: 1rem;
+                    input[type=text] {
+                        position: absolute;
+                        top: 0rem;
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        color: @colorBlue;
+                        font-size: 3rem;
+                    }
+                }
+                .submit {
+                    position: absolute;
+                    bottom: 1rem;
+                    left: 1rem;
+                    right: 1rem;
+                    height: 5rem;
+                    background-color: @colorBlue;
+                    .loginText {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: @colorDefault;
+                        font-size: 3rem;
+                    }
+                }
+            }}
+            position: relative;
+            width: 100%;
+            height: 100%;
+            .dashboardContainer {
+                position: absolute;
+                left: 0rem;
+                top: 0rem;
+                right: 0rem;
+                bottom: 0rem;
+                .dashboardView {
+                    position: absolute;
+                    right: 0rem;
+                    top: 0rem;
+                    overflow: hidden;
+                    left: 0rem;
+                    bottom: 0rem;
+                    border-top: 0.05rem solid @colorBorder;
+                    background-color: @colorDefault;
+                    .searchContainer {
+                        position: absolute;
+                        width: 33rem;
+                        top: 0rem;
+                        bottom: 0rem;
+                        background-color: @colorDefault;
+                        float: left;
+                        height: 100%;
+                        background-color: @colorDefault;
+                        .searchBarContainer {
+                            position: absolute;
+                            top: 8rem;
+                            height: 5rem;
+                            width: 100%;
+                            background-color: @colorSearchBarContainer;
+                            border-bottom: 0.05rem solid @colorBorder;
+                            .searchBar {
+                                position: absolute;
+                                height: 3rem;
+                                width: 30rem;
+                                background-color: @colorDefault;
+                                border-radius: 0.5rem;
+                                border: 0.05rem solid @colorBorder;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                        }
+                        .loggedInUser {
+                            position: absolute;
+                            top: 0rem;
+                            right: 0rem;
+                            left: 0rem;
+                            height: 8rem;
+                            background-color: @colorHeader;
+                            .userImage {
+                                position: relative;
+                                width: 6rem;
+                                margin-left: 1rem;
+                                display: circle;
+                                border-radius: 50%;
+                                border: 0.4rem solid transparent;
+                                margin-top: 0.8rem;
+                                float: left;
+                                background-color: cecaca;
+                            }
+                            .loggedInUserName {
+                                position: relative;
+                                font-size: 3rem;
+                                float: left;
+                                line-height: 7.3rem;
+                                margin-left: 1.5rem;
+                            }
+                        }
+                        input[type=text] {
+                            font-size: 1.3rem;
+                            outline: none;
+                            padding-left: 1.3rem;
+                        }
+                         ::-webkit-input-placeholder {
+                            /* Chrome/Opera/Safari */
+                            color: lightslategrey;
+                        }
+                        .searchResults::-webkit-scrollbar {
+                            display: none;
+                        }
+                        .searchResults {
+                            position: absolute;
+                            width: 33rem;
+                            top: 13rem;
+                            bottom: 0;
+                            overflow: auto;
+                            background-color: @colorDefault;
+                            .result:hover {
+                                cursor: pointer
+                            }
+                            .result {
+                                position: relative;
+                                display: block;
+                                height: 7rem;
+                                background-color: @colorDefault;
+                                border-bottom: 0.05rem solid @colorBorder;
+                                .searchImage {
+                                    position: relative;
+                                    width: 5rem;
+                                    margin-left: 1rem;
+                                    display: circle;
+                                    border-radius: 50%;
+                                    border: 0.4rem solid transparent;
+                                    margin-top: 1rem;
+                                    float: left;
+                                    background-color: cecaca;
+                                }
+                                .name {
+                                    position: relative;
+                                    background-color: #FFFFFF;
+                                    font-size: 2.2rem;
+                                    margin-left: 1.5rem;
+                                    line-height: 6.5rem;
+                                }
+                                .notifications {
+                                    position: relative;
+                                    font-size: 1.5rem;
+                                    color: white;
+                                    float: right;
+                                    line-height: 2rem;
+                                    width: 2rem;
+                                    height: 2rem;
+                                    text-align: center;
+                                    border-radius: 4rem;
+                                    margin-right: 3rem;
+                                    background-color: #09D261;
+                                    margin-top: 2.5rem;
+                                }
+                            }
+                            .result:hover {
+                                background-color: @colorHoverResult;
+                                .name {
+                                    background-color: @colorHoverResult;
+                                }
+                            }
+                        }
+                    }
+                    .searchNav::-webkit-scrollbar {
+                        display: none;
+                    }
+                    .userDetailContainer {
+                        position: absolute;
+                        bottom: 0rem;
+                        right: 0rem;
+                        top: 0rem;
+                        border-left: 0.05rem solid @colorBorder;
+                        left: 33rem;
+                        
+                        
+                        .chatHeader {
+                            position: absolute;
+                            top: 0rem;
+                            right: 0rem;
+                            left: 0rem;
+                            height: 8rem;
+                            background-color: @colorHeader;
+                            border-bottom: 0.05rem solid @colorBorder;
+                            .userImage {
+                                position: relative;
+                                width: 6rem;
+                                margin-left: 1rem;
+                                display: circle;
+                                border-radius: 50%;
+                                border: 0.4rem solid transparent;
+                                margin-top: 0.8rem;
+                                float: left;
+                                background-color: cecaca;
+                            }
+                            .currentOpenedUser {
+                                position: relative;
+                                font-size: 3rem;
+                                float: left;
+                                line-height: 7.3rem;
+                                margin-left: 1.5rem;
+                            }
+                        }
+                        .messages::-webkit-scrollbar {
+                            width: 0.8rem;
+                        }
+                        .messages::-webkit-scrollbar-thumb {
+                            background: #CBCBCB;
+                        }
+                        .messages {
+                            position: absolute;
+                            overflow: auto;
+                            top: 8rem;
+                            bottom: 6rem;
+                            left: 0rem;
+                            right: 0rem;
+                            background-color: @colorMsgsBackground;
+                            
+                            .msgRight {
+                                position: relative;
+                                float: right;
+                                clear: both;
+                                height: auto;
+                                background-color: @colorMsgSent;
+                                min-width: 11rem;
+                                max-width: 80rem;
+                                margin-top: 1rem;
+                                margin-bottom: 1rem;
+                                margin-right: 4rem;
+                                border-radius: 0.5rem 0 0.5rem 0.5rem;
+                                box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
+                                .rightTail {
+                                    position: absolute;
+                                    height: 0;
+                                    width: 0;
+                                    /* background-color: red; */
+                                    border-top: 1.6rem solid @colorMsgSent;
+                                    border-right: 1.6rem solid transparent;
+                                    right: -1.6rem;
+                                }
+                                .msgContent {
+                                    position: relative;
+                                    font-size: 1.7rem;
+                                    height: auto;
+                                    word-wrap: break-word;
+                                    margin: 1rem;
+                                }
+                                .msgMeta {
+                                    position: relative;
+                                    /* background-color: red; */
+                                    height: 2rem;
+                                    margin: 0.7rem;
+                                    .time {
+                                        position: absolute;
+                                        right: 3rem;
+                                        font-size: 1.3rem;
+                                        line-height: 2.3rem;
+                                    }
+                                    .status {
+                                        position: absolute;
+                                        width: 2rem;
+                                        right: 0rem;
+                                        .tick {
+                                            position: relative;
+                                            width: 2rem;
+                                        }
+                                    }
+                                }
+                            }
+                            .msgLeft {
+                                position: relative;
+                                float: left;
+                                clear: both;
+                                height: auto;
+                                background-color: @colorMsgReceived;
+                                min-width: 9rem;
+                                max-width: 80rem;
+                                margin-top: 1rem;
+                                margin-left: 4rem;
+                                border-radius: 0 0.5rem 0.5rem 0.5rem;
+                                margin-bottom: 1rem;
+                                box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
+                                .leftTail {
+                                    position: absolute;
+                                    height: 0;
+                                    width: 0;
+                                    /* background-color: red; */
+                                    border-top: 1.6rem solid #FFFFFF;
+                                    border-left: 1.6rem solid transparent;
+                                    left: -1.6rem;
+                                }
+                                .msgContent {
+                                    position: relative;
+                                    font-size: 1.7rem;
+                                    height: auto;
+                                    word-wrap: break-word;
+                                    margin: 1rem;
+                                }
+                                .msgMeta {
+                                    position: relative;
+                                    /* background-color: red; */
+                                    height: 2rem;
+                                    margin: 0.7rem;
+                                    .time {
+                                        position: absolute;
+                                        right: 1rem;
+                                        font-size: 1.3rem;
+                                        line-height: 2.3rem;
+                                    }
+                                    // .status {
+                                    //     position: absolute;
+                                    //     width: 2rem;
+                                    //     right: 0rem;
+                                    //     .tick {
+                                    //         position: relative;
+                                    //         width: 2rem;
+                                    //     }
+                                    // }
+                                }
+                            }
+                        }
+                        .sendMessage {
+                            position: absolute;
+                            bottom: 0rem;
+                            right: 0rem;
+                            left: 0rem;
+                            height: 6rem;
+                            background-color: @colorSendMsg;
+                            border-top: 0.05rem solid @colorBorder;
+                            .messageContainer {
+                                position: absolute;
+                                top: 1rem;
+                                bottom: 1rem;
+                                right: 7rem;
+                                left: 1rem;
+                                font-size: 1.5rem;
+                                input[type=text] {
+                                    position: absolute;
+                                    top: 0rem;
+                                    bottom: 0rem;
+                                    width: 100%;
+                                    font-size: 1.5rem;
+                                    padding-left: 0.5rem;
+                                    border: none;
+                                    border-color: transparent;
+                                    outline: none;
+                                    border-radius: 0.4rem;
+                                }
+                            }
+                            .sendButton {
+                                position: absolute;
+                                width: 3rem;
+                                right: 2rem;
+                                top: 50%;
+                                transform: translate(0, -50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
